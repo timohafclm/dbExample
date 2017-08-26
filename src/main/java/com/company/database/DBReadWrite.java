@@ -78,7 +78,7 @@ public class DBReadWrite implements Closeable {
     public void deleteItem(Integer itemId) throws Exception {
         if (!selectItemIdFromShippings(itemId).next())
             statement.execute("DELETE FROM items WHERE item_id=" + itemId + ";");
-        else ConsoleHelper.writeMessage("Эти данные используются в таблице SHIPPINGS. Удаление запрещено.");
+        else ConsoleHelper.writeMessage("These data are used in the table SHIPPINGS. Remove is forbidden.");
     }
 
     public void deleteTown(Integer townId) throws Exception {
