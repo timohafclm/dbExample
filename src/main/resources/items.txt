@@ -1,0 +1,5 @@
+mango=4
+apple=2
+bananas=5
+orange=2
+pear=0
