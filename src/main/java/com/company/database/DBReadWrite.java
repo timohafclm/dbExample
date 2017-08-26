@@ -47,8 +47,8 @@ public class DBReadWrite implements Closeable {
                 statement.execute(String.format("INSERT INTO shippings(item_id, town_id, start_date, end_date) VALUES" +
                         "('%d', '%d', '%s', '%s');", itemId, townId, dateFormatSQL.format(start), dateFormatSQL.format(end)));
             else
-                ConsoleHelper.writeMessage("Отсутствует первичный ключ.");
-        } else ConsoleHelper.writeMessage("Дата окончания не может быть меньше даты начала.");
+                ConsoleHelper.writeMessage("No primary key.");
+        } else ConsoleHelper.writeMessage("End date less than Start date.");
     }
 
     public ResultSet selectAllItems() throws Exception {
@@ -84,7 +84,7 @@ public class DBReadWrite implements Closeable {
     public void deleteTown(Integer townId) throws Exception {
         if (!selectTownIdFromShippings(townId).next())
             statement.execute("DELETE FROM towns WHERE town_id=" + townId + ";");
-        else ConsoleHelper.writeMessage("Эти данные используются в таблице SHIPPINGS. Удаление запрещено.");
+        else ConsoleHelper.writeMessage("These data are used in the table SHIPPINGS. Remove is forbidden.");
     }
 
     public void deleteShipping(Integer shippingId) throws Exception {

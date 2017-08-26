@@ -17,7 +17,7 @@ public class ConsoleHelper {
             try {
                 return reader.readLine();
             } catch (IOException e) {
-                System.out.println("Произошла ошибка ввода текста. Попробуйте ещё раз.");
+                System.out.println("Error. Repeat input.");
             }
         }
     }

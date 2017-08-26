@@ -32,17 +32,17 @@ public class DBConnection {
     }
 
     private static String getDBName() {
-        ConsoleHelper.writeMessage("Введите имя БД");
+        ConsoleHelper.writeMessage("Enter the name of the database");
         return ConsoleHelper.readString();
     }
 
     private static String getUser() {
-        ConsoleHelper.writeMessage("Введите имя пользователя");
+        ConsoleHelper.writeMessage("Enter user");
         return ConsoleHelper.readString();
     }
 
     private static String getPassword() {
-        ConsoleHelper.writeMessage("Введите пароль");
+        ConsoleHelper.writeMessage("Enter password");
         return ConsoleHelper.readString();
     }
 }

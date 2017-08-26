@@ -69,10 +69,10 @@ public class ConsoleApp extends Thread {
                     case "show_shippings":
                         viewShippingsResult(dbReadWrite.selectAllShippings());
                         continue;
-                        default:ConsoleHelper.writeMessage("Ошибка. Повторите ввод."); continue;
+                        default:ConsoleHelper.writeMessage("Error. Repeat input"); continue;
                 }
             } catch (Exception e) {
-                ConsoleHelper.writeMessage("Ошибка. Повторите ввод.");
+                ConsoleHelper.writeMessage("Error. Repeat input.");
                 continue;
             }
         }
